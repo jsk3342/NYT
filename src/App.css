@@ -1,0 +1,10 @@
+/* wrapper */
+.App {
+  width: 375px;
+  height: 768px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 1px solid red; 
+}

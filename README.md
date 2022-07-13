@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+#
+모바일 뷰로만 구현하면 됩니다. 
+2개의 화면으로 구성되어 있습니다.
+##
+Homescreen
+앱 시작시에 바로 나오는 화면입니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+new york times의 Article Search api 호출 데이터로 보여준다.
 
-## Available Scripts
+무한 스크롤을 적용해야한다.
 
-In the project directory, you can run:
+1번 항목들을 누르면 필터 모달이 나와야 한다.
 
-### `npm start`
+2번 항목을 누르면 시스템 Datepicker가 나와서 yyyy.mm.dd 포멧으로 선택할 수 있어야 한다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3번 항목 “국가" 선택지들은 체크박스 형식이며, 3-1 번 항목은 클릭전(inactive) 상태, 3-2 번 항목은 클릭 후(active) 상태
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+여러 선택지가 선택 가능해야 합니다.
 
-### `npm test`
+“필터 적용하기" 클릭 시에 위의 필터들이 적용된 데이터로 refresh 한다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4번 항목 헤드라인은 기사의 헤드라인을 기준으로 필터링 한다. string만 받는다.
 
-### `npm run build`
+필터링이 적용되면 5-1, 5-2, 5-3번 항목처럼 변해야 한다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+5-1은 너무 길어지면 말줄임표를 적용한다.
+5-2는 yyyy.mm.dd 포멧을 사용한다.
+5-3은 제일 처음 `${제일처음 데이터}외 ${총 데이터 갯수 - 1}` 포멧으로 작성한다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+6-1 은 스크랩이 되지 않은 (디폴트)상태입니다.  클릭하면, 6-2로 변합니다. 스크랩된 데이터는 scrapscreen에서 리스트로 볼 수 있습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+6-2은 스크랩이 된 상태입니다. 클릭하면 6-1로 변합니다. 클릭되면 scrapscreen에서도 지워집니다.
 
-### `npm run eject`
+리스트의 기사를 클릭하면 해당 기사에 해당하는 new york times의 기사 웹페이지로 리다이렉트 합니다. 뒤로가기를 클릭하면 프로덕트로 돌아올 수 있어야합니다.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##
+scrapscreen
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Homescreen과 모든 기능이 같으나, 해당 화면에서 나오는 기사는 스크랩된 기사만 나와야 한다.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+해당 화면에서 스크랩을 제거하면 바로 사라져야한다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+스크랩된 기사가 없으면 03_2_scrapscreen_nodata 화면이 랜더링 되어야 하며, 9번 버튼을 클릭하면 홈화면으로 이동한다.
 
-## Learn More
+###
+부가 설명)
+웹을 껐다 켜도 스크랩된 데이터는 남아있어야 한다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+스크랩이 될 때, 해제 될 때는 시스템 alert이나 toast 등으로 유저에게 간단하게 알려줘야 한다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+피그마 디자인을 준수해야 한다.
 
-### Code Splitting
+api로 받아오는 데이터 외의 문구들은 모두 피그마에 적힌 것을 기준으로 한다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+상단의 필터 부분은 “홈"화면과 “스크랩"화면이 서로 별개입니다. 예를들어, 홈화면의 필터의 값을 변경한 뒤 스크랩 화면으로 가더라도, 스크랩 화면의 필터가 변경되선 안됩니다.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

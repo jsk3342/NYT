@@ -1,0 +1,7 @@
+.likeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  margin: 4.5px 0;
+}

@@ -1,0 +1,14 @@
+.cardItems {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.Wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Wrap:first-child {
+  align-items: flex-start;
+}

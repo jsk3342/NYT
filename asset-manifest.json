@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NYT/static/css/main.f86437b4.css",
+    "main.js": "/NYT/static/js/main.968158d9.js",
+    "index.html": "/NYT/index.html",
+    "main.f86437b4.css.map": "/NYT/static/css/main.f86437b4.css.map",
+    "main.968158d9.js.map": "/NYT/static/js/main.968158d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f86437b4.css",
+    "static/js/main.968158d9.js"
+  ]
+}

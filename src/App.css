@@ -1,4 +1,12 @@
 /* wrapper */
+* {
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
 .App {
   width: 375px;
   height: 768px;
@@ -6,5 +14,5 @@
   box-sizing: border-box;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  border: 1px solid red; 
+  background-color: #fff;
 }

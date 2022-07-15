@@ -1,6 +1,7 @@
 import './App.css';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import EmptyScrap from './pages/home/EmptyScrap/EmptyScrap';
 import Main from './pages/home/Main/Main';
 <link
   rel="stylesheet"
@@ -11,8 +12,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main />
-      <Footer/>
+      {/* <Main /> */}
+      {/* <EmptyScrap /> */}
+      <Footer />
     </div>
   );
 }

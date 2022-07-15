@@ -1,0 +1,37 @@
+/* Layout */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.innerWrap {
+  margin: 122px auto 0;
+  padding: 20px;
+  width: 335px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+section + section {
+  margin-top: 40px;
+}
+
+.button {
+  margin-top: 40px;
+  width: 100%;
+  padding: 18px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.05em;
+  color: #ffffff;
+  background: #3478f6;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+}

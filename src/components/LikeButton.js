@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 const LikeButton = () => {
   const [star, setStar] = useState(starEmpty);
+
   const HandleStar = () => {
     if (star === starEmpty) {
       setStar(starFill);

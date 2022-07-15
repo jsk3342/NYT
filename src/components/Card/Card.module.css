@@ -12,3 +12,7 @@
 .Wrap:first-child {
   align-items: flex-start;
 }
+
+.cardItems + .cardItems {
+  margin-top: 10px;
+}

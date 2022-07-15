@@ -14,7 +14,7 @@ const Card = () => {
       <div className={styles.Wrap}>
         <SubTitle />
         <CreationDate />
-      </div>
+      </div>      
     </li>
   );
 };

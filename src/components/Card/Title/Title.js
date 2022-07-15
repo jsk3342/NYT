@@ -13,23 +13,23 @@ const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${search
 //   return title;
 // };
 
-const Title = () => {
-  const [result, setResult] = useState('');
-  console.log(result);
-  useEffect(() => {
-    async function GetTitle() {
-      try {
-        const res = await axios.get(URL);
-        const serchResult = res.data.response.docs[0].abstract;
-        console.log(serchResult);
-        setResult(serchResult);
-      } catch (error) {
-        console(error);
-      }
-    }
-    GetTitle();
-  }, []);
-  return <h2 className={styles.title}>{result}</h2>;
+const Title = (props) => {
+  // const [result, setResult] = useState('');
+  // console.log(result);
+  // useEffect(() => {
+  //   async function GetTitle() {
+  //     try {
+  //       const res = await axios.get(URL);
+  //       const serchResult = res.data.response.docs[0].abstract;
+  //       console.log(serchResult);
+  //       setResult(serchResult);
+  //     } catch (error) {
+  //       console(error);
+  //     }
+  //   }
+  //   GetTitle();
+  // }, []);
+  return <h2 className={styles.title}>{props.article}</h2>;
 };
 
 export default Title;

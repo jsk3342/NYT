@@ -8,13 +8,13 @@ let searchString = 'iphone';
 const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchString}&api-key=${key}`;
 
 const Main = () => {
+
   const [article, setArticle] = useState([]);
   useEffect(() => {
     async function GetArticle() {
       try {
         const res = await axios.get(URL);
         const articleResult = res.data.response.docs;
-        console.log(articleResult);
         setArticle(articleResult);
       } catch (error) {
         console(error);
@@ -22,11 +22,12 @@ const Main = () => {
     }
     GetArticle();
   }, []);
+
   return (
     <main className={styles.main}>
       <ul>
         {article.map((article, index) => {
-          return <Card article={article} index={index} />;
+          return <Card article={article} index={index} />; //기사 리덕스로 관리하기 나중에 처리
         })}
       </ul>
     </main>

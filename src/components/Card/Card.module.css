@@ -16,3 +16,7 @@
 .cardItems + .cardItems {
   margin-top: 10px;
 }
+
+.cardItems:last-child {
+  margin-bottom: 92px;
+}

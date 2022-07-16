@@ -12,7 +12,7 @@ function ScrapButton() {
 
   return (
     <button onClick={handleScrapIcon} className={styles.button}>
-      <img src={scrapicon} />
+      <img src={scrapicon} alt="스크랩 화면 아이콘" />
     </button>
   );
 }

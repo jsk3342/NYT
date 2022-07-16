@@ -1,6 +1,6 @@
-import Date from '../../../components/Date/Date';
-import HeadLine from '../../../components/HeadLine/HeadLine';
-import Nation from '../../../Nation/Nation';
+import Date from '../Date/Date';
+import HeadLine from '../HeadLine/HeadLine';
+import Nation from '../Nation/Nation';
 import styles from './Modal.module.css';
 
 function Modal() {

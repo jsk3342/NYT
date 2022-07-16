@@ -12,7 +12,7 @@ function HomeButton() {
 
   return (
     <button onClick={handleHomeIcon} className={styles.button}>
-      <img src={homeicon} />
+      <img src={homeicon} alt="홈 화면 아이콘"/>
     </button>
   );
 }

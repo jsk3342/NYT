@@ -6,7 +6,7 @@
 .header button {
   color: #6d6d6d;
   height: 34px;
-  padding: 0 11px;
+  padding: 0 8px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.04em;
@@ -15,6 +15,12 @@
   border-radius: 30px;
   background-color: #fff;
   cursor: pointer;
+}
+
+.header button:focus {
+  color: #3478f6;
+  border: 1px solid #82b0f4;
+  /* 이거는 상태관리 해야함, 눌린거에 따라서 필터 보여주기 */
 }
 
 .header button + button {

@@ -1,3 +1,10 @@
-.emptyScrap {
-  
+.button {
+  background-color: black;
+  flex-grow: 1;
+  cursor: pointer;
+}
+
+.button img {
+  width: 24px;
+  height: 45px;
 }

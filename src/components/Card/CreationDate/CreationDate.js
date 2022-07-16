@@ -1,9 +1,9 @@
 import styles from './CreationDate.module.css';
 
-const CreationDate = () => {
+const CreationDate = (props) => {
   return (
     <p className={styles.creationDate}>
-      2021.3.15. (목)
+      {props.pub_date.substring(0,10)}
     </p>
   );
 };

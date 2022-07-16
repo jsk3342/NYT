@@ -1,10 +1,5 @@
-.button {
-  background-color: black;
-  flex-grow: 1;
-  cursor: pointer;
-}
-
-.button img {
+.homeIcon {
   width: 24px;
   height: 45px;
+  margin-top: 21px;
 }

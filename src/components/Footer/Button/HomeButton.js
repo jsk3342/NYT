@@ -1,19 +1,22 @@
 import homeBlack from '../../../assets/btn_Home_Select_black.png';
 import home from '../../../assets/btn_Home_Select.png';
-import { useState } from 'react';
 import styles from './HomeButton.module.css';
+import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function HomeButton() {
   const [homeicon, setHomeIcon] = useState(home);
-
-  function handleHomeIcon() {
-    homeicon === home ? setHomeIcon(homeBlack) : setHomeIcon(home);
-  }
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === '/NYT') {
+      setHomeIcon(home);
+    } else {
+      setHomeIcon(homeBlack);
+    }
+  });
 
   return (
-    <button onClick={handleHomeIcon} className={styles.button}>
-      <img src={homeicon} alt="홈 화면 아이콘"/>
-    </button>
+    <img className={styles.homeIcon} src={homeicon} alt="홈 화면 아이콘" />
   );
 }
 

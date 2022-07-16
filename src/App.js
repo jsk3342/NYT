@@ -3,6 +3,7 @@ import Scrap from './pages/Scrap/Scrap';
 import './App.css';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
+import { Routes, Route } from 'react-router-dom';
 
 <link
   rel="stylesheet"
@@ -13,8 +14,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Home />
-      {/* <Scrap /> */}
+      <Routes>
+        <Route path="/NYT" element={<Home />} />
+        <Route path="/scrap" element={<Scrap />} />
+      </Routes>
       <Footer />
     </div>
   );

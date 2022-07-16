@@ -10,7 +10,12 @@
   display: flex;
 }
 
-.footer button {
+.footer a {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.footer a button {
   padding: 0;
   margin: 0;
   border: none;

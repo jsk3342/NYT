@@ -6,11 +6,12 @@ import { useSelector } from 'react-redux';
 import Modal from '../../components/Modal/Modal.js';
 
 const key = 'bIiSLhG9fcmiMJTS0qNuG7btu0CxRE8r';
-let searchString = 'usa';
+let searchString = '';
 const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchString}&api-key=${key}`;
 
 const Home = () => {
   const [article, setArticle] = useState([]);
+  const [modal, setModal] = useState(false);
   const initialState = useSelector((state) => {
     return state;
   });
@@ -32,13 +33,9 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <Main article={article} />
-      {/* <Modal /> */}
-      {
-        //버튼 클릭하면 모달창 나와 주세요 작성 버튼 상태 관리
-      }
+      {modal && <Modal />}
     </main>
   );
 };
 
 export default Home;
-

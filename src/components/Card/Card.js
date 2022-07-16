@@ -8,11 +8,8 @@ const Card = (props) => {
   return (
     <li className={styles.cardItems}>
       <div className={styles.Wrap}>
-        <Title
-          title={props.article.headline}
-          index={props.index}
-        />
-        <LikeButton />
+        <Title title={props.article.headline} index={props.index} />
+        <LikeButton star={props.star} />
       </div>
       <div className={styles.Wrap}>
         <Byline byline={props.article.byline.original} />

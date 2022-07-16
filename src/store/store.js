@@ -35,6 +35,5 @@ export const { onHomeIcon, offHomeIcon } = homeIconState.actions;
 export default configureStore({
   reducer: {
     keyword: keyword.reducer,
-    homeIconState: homeIconState.reducer,
   },
 });

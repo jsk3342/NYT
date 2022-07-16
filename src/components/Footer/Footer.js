@@ -13,5 +13,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-//여기도 리덕스로 홈 스크랩 버튼 상태 관리

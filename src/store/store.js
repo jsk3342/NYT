@@ -1,22 +1,12 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
+import headlineSlice from './headline';
+import getArticleSlice from './getArticle';
+import modalSlice from './modal';
 
-const articleInfo = createSlice({
-  name: 'articleInfo',
-  initialState: {
-    serchKeyword: '',
-    serchDate: '',
-    serchNaion: '',
-  },
-  reducers: {
-    changeKeyword(state, action) {
-      state.serchKeyword = action.payload;
-    },
-  },
-});
-
-export let { changeKeyword } = articleInfo.reducer;
 export default configureStore({
   reducer: {
-    articleInfo: articleInfo.reducer,
+    headlineSlice: headlineSlice.reducer,
+    getArticleSlice: getArticleSlice.reducer,
+    modalSlice: modalSlice.reducer,
   },
 });

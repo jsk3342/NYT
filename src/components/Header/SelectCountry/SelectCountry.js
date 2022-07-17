@@ -1,8 +1,8 @@
 import styles from './SelectCountry.module.css';
 
-const SelectCountry = () => {
+const SelectCountry = ({ popModal }) => {
   return (
-    <button className={styles.button} type="button">
+    <button className={styles.button} onClick={popModal} type="button">
       전체 국가
     </button>
   );

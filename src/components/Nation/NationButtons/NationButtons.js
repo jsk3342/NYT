@@ -15,9 +15,9 @@ const nations = [
 function NationButtons() {
   return (
     <div className={styles.warp}>
-      {nations.map((nations) => {
+      {nations.map((nations, index) => {
         return (
-          <button className={styles.button} type="button">
+          <button className={styles.button} key={index} type="button">
             {nations}
           </button>
         );

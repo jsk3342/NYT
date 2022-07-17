@@ -1,19 +1,14 @@
-// import { createSlice } from "@reduxjs/toolkit/dist/createSlice";
+import { createSlice } from '@reduxjs/toolkit';
 
-// let headLineKeyword = localStorage.getItem(headLineKeyword)
+const getArticleSlice = createSlice({
+  name: 'getArticle',
+  initialState: [],
+  reducers: {
+    addArticle(state, action) {
+      state.push(...action.payload);
+    },
+  },
+});
 
-// const getArticle = createSlice({
-//   name: 'NYTArticles',
-//   initialState: {
-//     serchKeyword: '',
-//     serchDate: '',
-//     serchNaion: '',
-//   }
-//   reducers: {
-//     enterKeyword(state) {
-//       return (state.serchKeyword = headLineKeyword);
-//     },
-//   }
-// });
-
-// export const { enterKeyword } = getArticle.actions;
+export const { addArticle } = getArticleSlice.actions;
+export default getArticleSlice;

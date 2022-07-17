@@ -29,10 +29,6 @@ const Home = () => {
     GetArticle();
   }, [serchKeyword]);
 
-  useEffect(() => {
-    console.log(modalState);
-  }, [modalState]);
-
   return (
     <main className={styles.main}>
       <Main article={article} />

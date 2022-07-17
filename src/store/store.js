@@ -1,4 +1,4 @@
-import { configureStore, createSlice } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import headlineSlice from './headline';
 import getArticleSlice from './getArticle';
 import modalSlice from './modal';

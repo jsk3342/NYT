@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { changeKeyword } from '../../store/headline';
 import styles from './HeadLine.module.css';
 

@@ -1,9 +1,12 @@
-import Home from './pages/home/Home.js';
-import Scrap from './pages/Scrap/Scrap';
-import './App.css';
 import Header from './components/Header/Header.js';
 import Footer from './components/Footer/Footer.js';
 import { Routes, Route } from 'react-router-dom';
+import Home from './pages/home/Home.js';
+import Scrap from './pages/Scrap/Scrap';
+import './App.css';
+// import { lazy } from 'react';
+
+// const Scrap = lazy(() => import('./pages/Scrap/Scrap'))
 
 <link
   rel="stylesheet"

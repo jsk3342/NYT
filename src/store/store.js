@@ -1,39 +1,22 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
-const keyword = createSlice({
-  name: 'keyword',
-  initialState: 'korea',
-  reducers: {
-    changeKeyword() {
-      return 'usa';
-    },
-  },
-});
-
-export const { changeKeyword } = keyword.actions;
-
-const homeIconState = createSlice({
-  name: 'homeIconState',
+const articleInfo = createSlice({
+  name: 'articleInfo',
   initialState: {
-    loading: false,
-    data: [],
-    isState: true,
-    error: null,
+    serchKeyword: '',
+    serchDate: '',
+    serchNaion: '',
   },
   reducers: {
-    onHomeIcon(state) {
-      return (state.isState = true);
-    },
-    offHomeIcon(state) {
-      return (state.isState = false);
+    changeKeyword(state, action) {
+      state.serchKeyword = action.payload;
     },
   },
 });
 
-export const { onHomeIcon, offHomeIcon } = homeIconState.actions;
-
+export let { changeKeyword } = articleInfo.reducer;
 export default configureStore({
   reducer: {
-    keyword: keyword.reducer,
+    articleInfo: articleInfo.reducer,
   },
 });

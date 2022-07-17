@@ -8,7 +8,7 @@ function HomeButton() {
   const [homeicon, setHomeIcon] = useState(home);
   const location = useLocation();
   useEffect(() => {
-    if (location.pathname === '/NYT') {
+    if (location.pathname === '/NYT' || location.pathname === '/NYT/') {
       setHomeIcon(home);
     } else {
       setHomeIcon(homeBlack);

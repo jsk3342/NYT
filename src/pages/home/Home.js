@@ -2,21 +2,20 @@ import styles from './Home.module.css';
 import Main from './Main/Main';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Modal from '../../components/Modal/Modal.js';
-
-const key = 'bIiSLhG9fcmiMJTS0qNuG7btu0CxRE8r';
-let searchString = '';
-const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchString}&api-key=${key}`;
+import changeKeyword from '../../store/store.js';
 
 const Home = () => {
+  let serchKeyword = '';
+  const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${serchKeyword}&api-key=bIiSLhG9fcmiMJTS0qNuG7btu0CxRE8r`;
   const [article, setArticle] = useState([]);
-  const [modal, setModal] = useState(false);
-  const initialState = useSelector((state) => {
-    return state;
-  });
-  console.log(initialState);
+  const dispatch = useDispatch();
+  let articleInfoSerchKeyword = useSelector(
+    (state) => state.articleInfo.serchKeyword
+  );
 
+  //기사 가져오기
   useEffect(() => {
     async function GetArticle() {
       try {
@@ -24,7 +23,7 @@ const Home = () => {
         const articleResult = res.data.response.docs;
         setArticle(articleResult);
       } catch (error) {
-        console(error);
+        console.log(error);
       }
     }
     GetArticle();
@@ -33,7 +32,7 @@ const Home = () => {
   return (
     <main className={styles.main}>
       <Main article={article} />
-      {modal && <Modal />}
+      <Modal />
     </main>
   );
 };

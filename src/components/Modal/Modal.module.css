@@ -1,4 +1,5 @@
 /* Layout */
+/* 모달창 리퀘스트 에니메이션으로 구현하기 */
 .modal {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;

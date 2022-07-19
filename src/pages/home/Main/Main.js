@@ -1,4 +1,5 @@
 import Card from '../../../components/Card/Card';
+import { useSelector } from 'react-redux/es/exports';
 //import styles from './Main.module.css';
 
 const Main = (props) => {

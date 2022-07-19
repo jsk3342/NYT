@@ -5,12 +5,14 @@ import Byline from './Byline/Byline';
 import Title from './Title/Title';
 
 const Card = (props) => {
-  // const state = useSelector(state => state.getArticleSlice)
-
   return (
     <li className={styles.cardItems}>
       <div className={styles.Wrap}>
-        <Title title={props.article.headline} index={props.index} />
+        <Title
+          title={props.article.headline}
+          web_url={props.article.web_url}
+          index={props.index}
+        />
         <LikeButton star={props.star} />
       </div>
       <div className={styles.Wrap}>

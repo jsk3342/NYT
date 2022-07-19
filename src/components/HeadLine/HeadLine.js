@@ -7,7 +7,9 @@ function HeadLine() {
   const dispatch = useDispatch();
   const handleheadLineInputChange = (e) => {
     //키워드가 입력된 1초 뒤에 저장하고 싶음, 성능 개선 필요
-    dispatch(changeKeyword(e.target.value));
+    let inputValue = e.target.value.replace(/(\W)/g, '+');
+    console.log(inputValue);
+    dispatch(changeKeyword(inputValue));
   };
 
   return (

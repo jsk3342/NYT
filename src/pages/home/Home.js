@@ -24,6 +24,7 @@ const Home = () => {
         const articleResult = res.data.response.docs;
         setArticle(articleResult);
         dispatch(addArticle(articleResult));
+        console.log(articleResult);
       } catch (error) {
         console.log(error);
       }

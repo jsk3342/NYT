@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/NYT/static/css/main.b2244d75.css",
-    "main.js": "/NYT/static/js/main.d2ff9d77.js",
+    "main.css": "/NYT/static/css/main.d7cef81d.css",
+    "main.js": "/NYT/static/js/main.bc20cb93.js",
     "index.html": "/NYT/index.html",
-    "main.b2244d75.css.map": "/NYT/static/css/main.b2244d75.css.map",
-    "main.d2ff9d77.js.map": "/NYT/static/js/main.d2ff9d77.js.map"
+    "main.d7cef81d.css.map": "/NYT/static/css/main.d7cef81d.css.map",
+    "main.bc20cb93.js.map": "/NYT/static/js/main.bc20cb93.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2244d75.css",
-    "static/js/main.d2ff9d77.js"
+    "static/css/main.d7cef81d.css",
+    "static/js/main.bc20cb93.js"
   ]
 }

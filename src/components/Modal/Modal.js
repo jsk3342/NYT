@@ -8,9 +8,8 @@ import { nonModal } from '../../store/modal';
 function Modal() {
   const dispatch = useDispatch();
   const closeModal = () => {
-    // state ? setState(false) : setState(true);
-    // console.log(state);
     dispatch(nonModal());
+    //버튼 누를 때 인풋 키워드 통신 후 보내기
   };
   return (
     <section className={styles.modal}>

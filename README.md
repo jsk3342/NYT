@@ -1,6 +1,6 @@
 # 뉴욕 타임즈 기사 API를 활용한 리액트 프로젝트
 <img width="252" alt="image" src="https://user-images.githubusercontent.com/85912592/180590466-244c0428-5169-4523-b0db-0f97bc1cc4db.png">
-
+배포 링크 : https://jsk3342.github.io/NYT
 
 ##
 앱 시작시에 바로 나오는 화면입니다.
